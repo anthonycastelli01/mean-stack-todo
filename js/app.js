@@ -11,7 +11,7 @@
     this.addTask = function(list) {
       list.tasks.push(this.task);
       this.task = {};
-    }
+    };
   });
 
   var exampleTasks = [

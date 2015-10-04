@@ -19,10 +19,10 @@
         </div>
       </div>
 
-      <form name="taskForm" ng-controller="TaskController as taskCtrl" ng-submit="taskCtrl.addTask(list)">
-      <input ng-model="taskCtrl.task.name" type="text" />
-      <input type="submit" value="Submit" />
-    </form>
+      <form name="taskForm" ng-controller="TaskController as taskCtrl" ng-submit="taskForm.$valid && taskCtrl.addTask(list)" novalidate>
+        <input ng-model="taskCtrl.task.name" type="text" required/>
+        <input type="submit" value="Submit" />
+      </form>
     </div>
 
 
