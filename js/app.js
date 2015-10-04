@@ -1,7 +1,7 @@
 (function() {
   var app = angular.module('todo', []);
 
-  app.controller('TodoController', function() {
+  app.controller('ListController', function() {
     this.tasks = exampleTasks;
   });
 
