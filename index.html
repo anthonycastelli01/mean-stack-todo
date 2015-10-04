@@ -5,8 +5,9 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   </head>
   <body ng-controller="TodoController as todolist">
+    <h1>ToDo List:</h1>
     <ul>
-      <li ng-repeat="task in todolist.tasks">
+      <li class="list-group-item" ng-repeat="task in todolist.tasks">
         <h3>
           {{task.name}}
         </h3>
