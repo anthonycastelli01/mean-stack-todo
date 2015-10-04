@@ -3,5 +3,5 @@
 
   app.controller('TodoController', function() {
     this.tasks = {};
-  })
+  });
 })();
