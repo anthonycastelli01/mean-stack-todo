@@ -8,3 +8,8 @@
 .ng-valid.ng-dirty {
   border-color: green;
 }
+
+.input-group {
+  margin: 0 auto;
+  width: 500px;
+}

@@ -19,27 +19,35 @@
       <h1>ToDo List:</h1>
     </div>
 
-    <div id="todo-list" class="row">
-      <div class="col-sm-4 col-sm-offset-4">
-        <!-- LOOP OVER THE TASKS IN $scope.tasks -->
-        <div class="checkbox" ng-repeat="task in tasks">
-          <label>
-            <input type="checkbox" ng-click="deleteTask(task._id)"> {{ task.name }}
-          </label>
-        </div>
+    <div id="todo-list" class="col-md-8">
+      <div class="input-group">
+        <ul class="input-group list-group">
+          <div class="input-group-item">
+            <li class="list-group-item" ng-repeat="task in tasks">
+              <button type="button"
+                      class="btn btn-danger badge"
+                      ng-click="deleteTask(task._id)">
+                <i class="glyphicon glyphicon-trash"></i>
+              </button>
+              <span>{{task.name}}</span>
+            </li>
+          </div>
+        </ul>
       </div>
     </div>
 
-    <div id="todo-form" class="row">
-      <div class="col-sm-8 col-sm-offset-2 text-center">
+    <div id="todo-form">
+      <div class="col-md-8 text-center">
         <form>
-          <div class="form-group">
+          <div class="input-group">
             <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
             <input type="text" class="form-control input-lg text-center" placeholder="define a task here" ng-model="formData.name">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-primary btn-lg" ng-click="createTask()">
+                <i class="glyphicon glyphicon-plus"></i>
+              </button>
+            </span>
           </div>
-
-          <!-- createTask() WILL CREATE NEW TASKS -->
-          <button type="submit" class="btn btn-primary btn-lg" ng-click="createTask()">Add</button>
         </form>
       </div>
     </div>
